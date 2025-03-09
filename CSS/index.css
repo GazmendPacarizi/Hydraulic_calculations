@@ -1,0 +1,24 @@
+a {
+    color: black !important;
+    text-transform: none !important;
+    text-decoration: none !important; /* If you want to remove underline */
+    display: inline-block;
+}
+
+/*
+#accordions a:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+}
+*/
+#accordions:hover {
+    background-color: rgba(0, 0, 0, 0.13);
+}
+
+@media screen and (min-width: 768px) {
+    #accordions {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+

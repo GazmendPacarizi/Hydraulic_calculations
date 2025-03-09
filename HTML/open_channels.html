@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open channels</title>
+    <link rel="stylesheet" href="../CSS/open_channels.css">
+    <link rel="stylesheet" href="../CSS/body.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container-fluid mt-5">
+       <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <!--Per me rregullu karten mos me prish height, ja dhojme si height imazhit, pra style = height dhe jo width-->
+                <div class="card" style="height: 55rem;">
+                    <h5 class="card-title text-center">Trapezoid channel</h5>
+                    <br>
+                    <img src="../IMAGES/ktr.jpg" class="card-img-top" alt="TRAPEZOID_CHANNEL">
+                    <div class="card-body">
+                            <label for="trap_base">Base B2 (m)</label><br>
+                            <input type="text" id="trap_base" required> <br>
+                            <label for="trap_sideB1">Sideline B1 (m)</label><br>
+                            <input type="text" id="trap_sideB1" required><br>
+                            <label for="trap_sideB3">Sideline B3 (m)</label><br>
+                            <input type="text" id="trap_sideB3" required><br>
+                            <label for="trap_height">Height H (m)</label><br>
+                            <input type="text" id="trap_height" required><br>
+                            <label for="trap_slope">Slope i (percentage)</label><br>
+                            <input type="text" id="trap_slope" required><br>
+                            <label for="trap_friction1">Manning coefficient n1 (number)</label><br>
+                            <input type="text" id="trap_friction1" required><br>
+                            <label for="trap_friction2">Manning coefficient n2 (number)</label><br>
+                            <input type="text" id="trap_friction2" required><br>
+                            <label for="trap_friction3">Manning coefficient n3 (number)</label><br>
+                            <input type="text" id="trap_friction3" required><br>
+                            <button id="trap_calculation">Calculate</button><br>
+                            <label for="trap_Area" id="trap_Area"></label><br>
+                            <label for="trap_Perimeter" id="trap_Perimeter"></label><br>
+                            <label for="trap_Radius" id="trap_Radius"></label><br>
+                            <label for="trap_velocity" id="trap_velocity"></label><br>
+                            <label for="trap_flow" id="trap_flow"></label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="height: 55rem;">
+                    <h5 class="card-title text-center">RECTANGULAR_CHANNEL</h5>
+                    <br>
+                    <img src="../IMAGES/kdr.jpg" class="card-img-top" alt="RECTANGULAR_CHANNEL">
+                    <div class="card-body">
+                            <label for="rec_base">Base B (m)</label><br>
+                            <input type="text" id="rec_base" required> <br>
+                            <label for="rec_height">Height H (m)</label><br>
+                            <input type="text" id="rec_height" required><br>
+                            <label for="rec_slope">Slope i (percentage)</label><br>
+                            <input type="text" id="rec_slope" required><br>
+                            <label for="rec_friction">Manning coefficient n (number)</label><br>
+                            <input type="text" id="rec_friction" required><br>
+                            <button id="rec_calculation">Calculate</button><br>
+                            <label for="rec_Area" id="rec_Area"></label><br>
+                            <label for="rec_Perimeter" id="rec_Perimeter"></label><br>
+                            <label for="rec_Radius" id="rec_Radius"></label><br>
+                            <label for="rec_velocity" id="rec_velocity"></label><br>
+                            <label for="rec_flow" id="rec_flow"></label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="height: 55rem;">
+                    <h5 class="card-title text-center">HALF CIRCLE CHANNEL</h5>
+                    <br>
+                    <img src="../IMAGES/gjysmerreth.jpg" class="card-img-top" alt="HALFCIRCLE_CHANNEL" style="height: 200px; width: 70%; margin: 0 auto;">
+                    <div class="card-body">
+                            <label for="hcircle_diam">Diameter (m)</label><br>
+                            <input type="text" id="hcircle_diam" required> <br>
+                            <label for="hcircle_slope">Slope i (percentage)</label><br>
+                            <input type="text" id="hcircle_slope" required><br>
+                            <label for="hcircle_friction">Manning coefficient n (number)</label><br>
+                            <input type="text" id="hcircle_friction" required><br>
+                            <button id="hcircle_calculation">Calculate</button><br>
+                            <label for="hcircle_Area" id="hcircle_Area"></label><br>
+                            <label for="hcircle_Perimeter" id="hcircle_Perimeter"></label><br>
+                            <label for="hcircle_Radius" id="hcircle_Radius"></label><br>
+                            <label for="hcircle_velocity" id="hcircle_velocity"></label><br>
+                            <label for="hcircle_flow" id="hcircle_flow"></label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <!--Per me rregullu karten mos me prish height, ja dhojme si height imazhit, pra style = height dhe jo width-->
+                <div class="card" style="height: 85rem;">
+                    <h5 class="card-title text-center">Composite channel</h5>
+                    <br>
+                    <img src="../IMAGES/ktrperbere.jpg" class="card-img-top" alt="TRAPEZOID_CHANNEL">
+                    <div class="card-body">
+                            <label for="composit_trap_base">Base B4 (m)</label><br>
+                            <input type="text" id="composit_trap_base" required> <br>
+                            <label for="composit_trap_sideB1">Sideline B1 (m)</label><br>
+                            <input type="text" id="composit_trap_sideB1" required><br>
+                            <label for="composit_trap_sideB2">Base B2 (m)</label><br>
+                            <input type="text" id="composit_trap_sideB2" required><br>
+                            <label for="composit_trap_sideB3">Sideline B3 (m)</label><br>
+                            <input type="text" id="composit_trap_sideB3" required><br>
+                            <label for="composit_trap_height1">Height H1 (m)</label><br>
+                            <input type="text" id="composit_trap_height1" required><br>
+                            <label for="composit_trap_height2">Height H2 (m)</label><br>
+                            <input type="text" id="composit_trap_height2" required><br>
+                            <label for="composit_trap_sideB5">Sideline B5 (m)</label><br>
+                            <input type="text" id="composit_trap_sideB5" required><br>
+                            <label for="composit_trap_sideB6">Base B6 (m)</label><br>
+                            <input type="text" id="composit_trap_sideB6" required><br>
+                            <label for="composit_trap_sideB7">Sideline B7 (m)</label><br>
+                            <input type="text" id="composit_trap_sideB7" required><br>
+                            <label for="composite_trap_slope">Slope i (percentage)</label><br>
+                            <input type="text" id="composite_trap_slope" required><br>
+
+                            <label for="composite_trap_friction1">Manning coefficient n1 (number)</label><br>
+                            <input type="text" id="composite_trap_friction1" required><br>
+
+                            <label for="composite_trap_friction2">Manning coefficient n2 (number)</label><br>
+                            <input type="text" id="composite_trap_friction2" required><br>
+
+                            <label for="composite_trap_friction3">Manning coefficient n3 (number)</label><br>
+                            <input type="text" id="composite_trap_friction3" required><br>
+
+                            <label for="composite_trap_friction4">Manning coefficient n4 (number)</label><br>
+                            <input type="text" id="composite_trap_friction4" required><br>
+
+                            <label for="composite_trap_friction5">Manning coefficient n5 (number)</label><br>
+                            <input type="text" id="composite_trap_friction5" required><br>
+
+                            <label for="composite_trap_friction6">Manning coefficient n6 (number)</label><br>
+                            <input type="text" id="composite_trap_friction6" required><br>
+
+                            <label for="composite_trap_friction7">Manning coefficient n7 (number)</label><br>
+                            <input type="text" id="composite_trap_friction7" required><br>
+
+                            <button id="composite_trap_calculation">Calculate</button><br>
+
+
+                            <label for="composite_trap_Area" id="composite_trap_Area"></label><br>
+                            <label for="composite_trap_Perimeter" id="composite_trap_Perimeter"></label><br>
+                            <label for="composite_trap_Radius" id="composite_trap_Radius"></label><br>
+                            <label for="composite_trap_velocity" id="composite_trap_velocity"></label><br>
+                            <label for="composite_trap_flow" id="composite_trap_flow"></label><br>
+
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <footer>
+        <p><span id="year"></span>&copy; Gazmend Paçarizi </p>
+    </footer>
+    <script src="../JS/quantities.js"></script>
+    <script src="../JS/trap_javascript.js"></script>
+    <script src="../JS/rec_javascript.js"></script>
+    <script src="../JS/hcircle_javascript.js"></script>
+    <script src="../JS/composite_channel.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

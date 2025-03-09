@@ -1,0 +1,22 @@
+input, textarea {
+    width: 40%;
+    padding: 2px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100px;
+    border-radius: 10px !important;
+    margin-top: 5px !important;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.555);
+    color: white;
+}
+
+
+/*input[type=text] - will only select text fields
+input[type=password] - will only select password fields
+input[type=number] - will only select number fields */
