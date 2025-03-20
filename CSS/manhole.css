@@ -1,0 +1,17 @@
+table input {
+    width: 100%;
+    box-sizing: border-box;
+}
+button {
+    margin-top: 10px;
+
+}
+
+.btn-delete {
+    background-color: red !important;
+    color: white;
+}
+.btn-delete:hover {
+    background-color: darkred;
+    color: white;
+}
