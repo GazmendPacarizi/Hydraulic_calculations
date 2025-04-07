@@ -10,9 +10,9 @@ function calculateAll() {
         // Example calculations (adjust as needed)
         const manholeBody = numManholes * diameter * height;
         const concretePipeBed = numManholes * Math.PI * Math.pow(pipeDiameter / 2, 2) * height;
-        const manholeConcreteBed = manholeBody * 0.8;
-        const manholeGravelBed = manholeBody * 0.2;
-        const manholeSteelBarStairs = numManholes * 10;
+        const manholeConcreteBed = ((diameter + 0.5) * (diameter + 0.5)) * 0.2;
+        const manholeGravelBed = ((diameter + 0.5) * (diameter + 0.5)) * 0.2;
+        const manholeSteelBarStairs = numManholes * height / 0.3;
 
         // Set calculated values in the row
         row.querySelector('.manhole-body').textContent = manholeBody.toFixed(2);
